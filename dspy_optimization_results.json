@@ -1,0 +1,7 @@
+{
+  "baseline_accuracy": 0.5,
+  "optimized_accuracy": 0.5,
+  "improvement": 0.0,
+  "num_train": 4,
+  "num_val": 2
+}
