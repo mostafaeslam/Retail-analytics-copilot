@@ -10,12 +10,13 @@ import os
 
 # Optional: Configure DSPy with Ollama if available
 # Uncomment the following lines to enable DSPy optimization:
-# try:
-#     import dspy
-#     dspy.configure(lm=dspy.LM('ollama/phi3.5:3.8b-mini-instruct-q4_K_M'))
-#     print("DSPy configured with Ollama")
-# except:
-#     print("DSPy not configured, using rule-based fallbacks")
+try:
+    import dspy
+
+    dspy.configure(lm=dspy.LM("ollama/phi3.5:3.8b-mini-instruct-q4_K_M"))
+    print("DSPy configured with Ollama")
+except Exception as e:
+    print(f"DSPy not configured, using rule-based fallbacks: {e}")
 
 from agent.graph_hybrid import HybridAgent
 
